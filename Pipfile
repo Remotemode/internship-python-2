@@ -8,6 +8,8 @@ flask = "*"
 pypyodbc = "*"
 flask-restful = "*"
 pyodbc = "*"
+dish = "*"
+py = "*"
 
 [dev-packages]
 
