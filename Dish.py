@@ -46,7 +46,22 @@ class Dish:
         self.cursor.execute(sql_update_query, value)
         self.sqlite_connection.commit()
         print("update_dish")
-    
+
+    def get_ingredients_by_dish(self, name):
+        sqlite_select_query = "SELECT Ingredients.name, Ingredients.Count  from Ingredients, Dish WHERE Dish.Name = ?"
+        value = [name]
+        for row in self.cursor.execute(sqlite_select_query, value):
+            print(row)
+        total_rows = self.cursor.fetchone()
+        print('get_all_ingredients')
+
+    def price_ingredients_for_dish(self, id):
+        sqlite_select_query = "SELECT SUM(Ingredients.price)  from Ingredients, Dish WHERE Dish.id_dish = ?"
+        value = [id]
+        for row in self.cursor.execute(sqlite_select_query, value):
+            print(row)
+        total_rows = self.cursor.fetchone()
+        print('price_ingredients_for_dish')
         
 
 
