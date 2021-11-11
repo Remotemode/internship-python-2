@@ -15,7 +15,8 @@ class Dish:
 
     def get_all(self):
         sqlite_select_query = "SELECT * from Dish"
-        self.cursor.execute(sqlite_select_query)
+        for row in self.cursor.execute(sqlite_select_query):
+            print(row)
         total_rows = self.cursor.fetchone()
         print('get_all')
 
@@ -24,6 +25,7 @@ class Dish:
         value = [name, quantity, price];
         self.cursor.execute(sqlite_insert_query, value)
         total_rows = self.cursor.fetchone()
+        self.sqlite_connection.commit()
         print('insert_dish')
 
     def end(self):
@@ -35,12 +37,14 @@ class Dish:
         sql_delete_query = "DELETE from Dish where id_dish = ?"
         value = [id];
         self.cursor.execute(sql_delete_query, value)
+        self.sqlite_connection.commit()
         print("delete_dish")
 
     def update_dish(self, name, price):
         sql_update_query = "Update Dish set price = ? where name = ?"
         value = [price, name];
         self.cursor.execute(sql_update_query, value)
+        self.sqlite_connection.commit()
         print("update_dish")
     
         
