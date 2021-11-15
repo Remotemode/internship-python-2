@@ -62,6 +62,14 @@ class Dish:
             print(row)
         total_rows = self.cursor.fetchone()
         print('price_ingredients_for_dish')
+
+    def sorting_dish_by_price(self):
+        sqlite_select_query = "SELECT name from Dish ORDER BY price"
+        value = [id]
+        for row in self.cursor.execute(sqlite_select_query, value):
+            print(row)
+        total_rows = self.cursor.fetchone()
+        print('price_ingredients_for_dish')
         
 
 
