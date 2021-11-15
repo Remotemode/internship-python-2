@@ -1,0 +1,4 @@
+dish~=0.0.0
+Flask~=2.0.2
+Django~=3.2.9
+pycodestyle~=2.8.0

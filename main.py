@@ -3,7 +3,6 @@ import sqlite3
 import Dish as D
 import Ingredients as I
 import pycodestyle
-
 dish = D.Dish()
 dish.get_all()
 dish.insert_dish('FE66R', 'FD', 34)

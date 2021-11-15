@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4b05511354c7c4e1e03d1ba83343a534be2d3393b1702353ee0da979f038ed88"
+            "sha256": "7e3965a72a53741eda7310ff3c6622cb2beb27fe5e085879adc2b2fb3613c76e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,6 +29,19 @@
                 "sha256:99f94f5e3348a0bcd43c82e5fc4414013ccc19d70bd939ad71e0133ce9c372e0"
             ],
             "version": "==1.1.8"
+        },
+        "automium": {
+            "hashes": [
+                "sha256:563971741abeb0a9a579441799a8cfe4542086aeb3755a9664ae3b2f2e959230"
+            ],
+            "version": "==0.2.6"
+        },
+        "automium-web": {
+            "hashes": [
+                "sha256:0d74d4e61c23f03305838623a57a36e3c715438f8723bc9757bf4c048304d3ca"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         },
         "certifi": {
             "hashes": [
@@ -110,6 +123,13 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==3.0.3"
+        },
+        "legacy": {
+            "hashes": [
+                "sha256:579bfac4ccdc706d7431c1ae0f96c32887196b1584a0aec18c0c452bb96e6482",
+                "sha256:ebeb9f6946085a1b77a393838502bc1a84faab7edd84d32ba13b31992476c1b6"
+            ],
+            "version": "==0.1.6"
         },
         "markupsafe": {
             "hashes": [
