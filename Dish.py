@@ -34,7 +34,7 @@ class Dish:
             print("Соединение с SQLite закрыто")
 
     def delete_dish(self, id):
-        sql_delete_query = "DELETE from Dish where id_dish = ?"
+        sql_delete_query = "DELETE from Dish where id = ?"
         value = [id];
         self.cursor.execute(sql_delete_query, value)
         self.sqlite_connection.commit()
@@ -56,7 +56,7 @@ class Dish:
         print('get_all_ingredients')
 
     def price_ingredients_for_dish(self, id):
-        sqlite_select_query = "SELECT SUM(Ingredients.price)  from Ingredients, Dish WHERE Dish.id_dish = ?"
+        sqlite_select_query = "SELECT SUM(Ingredients.price)  from Ingredients, Dish WHERE Dish.id = ?"
         value = [id]
         for row in self.cursor.execute(sqlite_select_query, value):
             print(row)

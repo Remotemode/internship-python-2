@@ -5,6 +5,7 @@ from .views import *
 
 
 urlpatterns = [
-    path('', index),
-    # path('dish', get_dish_by_dish(4))
+    path('coo', index),
+    path('sort', sort),
+    # path('dish', get_dish_by_dish('','ggg'))
 ]
