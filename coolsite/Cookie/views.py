@@ -8,33 +8,27 @@ from .models import Dish
 
 def index(request):  # HttpRequest
     posts = Dish.objects.all().explain()
-    posts.save()
-    print(posts.explain())
-    return HttpResponse(" ")
+    print(posts)
+    return HttpResponse()
 
 
-def get_dish_by_dish(request, name):
-    posts = Dish.objects.filter(name=name)
-    print(posts.explain())
+def get_dish_by_dish(request):
+    posts = Dish.objects.filter(name='fff')
+    print(posts)
     return HttpResponse("get_ingredients_by_dish")
-
-
-def filter_by_date(request, data_start, data_finish):
-    posts = Dish.objects.all().filter(data_start, data_finish)
-    print(posts.explain())
-    return HttpResponse("sort")
 
 
 def sort(request):  # HttpRequest
     order_by = request.GET.get('order_by', 'price')
     posts = Dish.objects.all().order_by(order_by).explain()
-    print(posts.explain())
-    return HttpResponse("sort")
+    print(posts)
+    return HttpResponse("sort", posts)
 
 
-def insert(request, name, quantity):
-    dish = Dish.objects.create(name=name)
+def insert(request):
+    dish = Dish.objects.create(name='hgh', quantity="dff", price=0.2)
     Dish.authors.add(dish)
     Dish.save()
     print(dish.explain())
+    return HttpResponse("insert")
 
