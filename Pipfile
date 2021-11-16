@@ -11,6 +11,7 @@ pyodbc = "*"
 dish = "*"
 py = "*"
 automium-web = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
