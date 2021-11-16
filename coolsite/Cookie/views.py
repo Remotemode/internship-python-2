@@ -20,15 +20,11 @@ def get_dish_by_dish(request):
 
 def sort(request):  # HttpRequest
     order_by = request.GET.get('order_by', 'price')
-    posts = Dish.objects.all().order_by(order_by).explain()
-    print(posts)
+    posts = Dish.objects.all().order_by(order_by)
+    print(posts.query)
     return HttpResponse("sort", posts)
-
 
 def insert(request):
     dish = Dish.objects.create(name='hgh', quantity="dff", price=0.2)
-    Dish.authors.add(dish)
     Dish.save()
-    print(dish.explain())
-    return HttpResponse("insert")
 
