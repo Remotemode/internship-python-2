@@ -24,7 +24,10 @@ def sort(request):  # HttpRequest
     print(posts.query)
     return HttpResponse("sort", posts)
 
+
 def insert(request):
     dish = Dish.objects.create(name='hgh', quantity="dff", price=0.2)
-    Dish.save()
+
+    return HttpResponse("insert")
+
 
