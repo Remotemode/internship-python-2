@@ -27,9 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-INSTALLED_APPS = [
-    'debug_toolbar',
-]
 
 # Application definition
 
@@ -73,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'coolest.wsgi.application'
+WSGI_APPLICATION = 'coolsite.wsgi.application'
 
 
 # Database
