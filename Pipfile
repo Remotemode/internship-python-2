@@ -12,6 +12,7 @@ dish = "*"
 py = "*"
 automium-web = "*"
 django-debug-toolbar = "*"
+render = "*"
 
 [dev-packages]
 
